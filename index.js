@@ -5,9 +5,9 @@ const database = "./cars.json";
 loadFile(database).then(data => {
     cars_data = data
 
-    document.getElementById("discover1").src = getRandomElement(cars_data)["index"]
+    /*document.getElementById("discover1").src = getRandomElement(cars_data)["index"]
     document.getElementById("discover2").src = getRandomElement(cars_data)["index"]
-    document.getElementById("discover3").src = getRandomElement(cars_data)["index"]
+    document.getElementById("discover3").src = getRandomElement(cars_data)["index"]*/
 });
 
 updateSliderValue(document.getElementById("price").value)

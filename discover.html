@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover</title>
+    <script src="index.js"></script>
+    <script src="discover.js"></script>
 </head>
 <body>
-    <p>Yooo whatup</p>
+    <header>
+        <h1>Discover</h1>
+    </header>
+
+    <hr>
+
+    <article>
+        <form>
+            <div>
+                <p>Looking for something?</p>
+                <input type="search" id="searchbar" placeholder="Type something...">
+            </div>
+
+            <div>
+                <p>Fuel type:</p>
+                <label>
+                    <input type="checkbox">
+                    Petrol
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Diesel
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Hybrid
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Electric
+                </label>
+            </div>
+
+            <div>
+                <p>Wheel drive:</p>
+                <label>
+                    <input type="radio" name="drive">
+                    FWD
+                </label>
+                <label>
+                    <input type="radio" name="drive">
+                    RWD
+                </label>
+                <label>
+                    <input type="radio" name="drive">
+                    AWD
+                </label>
+                <label>
+                    <input type="radio" name="drive">
+                    4WD
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Minimum price:
+                    <input type="range" min="0" max="50000">
+                </label>
+                <label>
+                    Maximum price:
+                    <input type="range" min="50000" max="100000">
+                </label>
+            </div>
+
+            <div>
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </article>
+
+    <hr>
+
+    <artice>
+        <table>
+            
+        </table>
+    </artice>
 </body>
 </html>

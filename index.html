@@ -6,6 +6,33 @@
     <title>Main page</title>
     <style src="index.css"></style>
     <script src="index.js"></script>
+
+    <style>
+        #imageFrame {
+          width: 400px;
+          height: 300px;
+          margin: auto;
+          overflow: hidden;
+        }
+        img {
+          width: 100%;
+          height: auto;
+          display: block; /* Remove extra space below the image */
+        }
+    </style>
+    <script>
+        let currentIndex = 0;
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % (cars_data.length - 3);
+            document.getElementById('discover1').src = cars_data[currentIndex]["index"];
+            document.getElementById('discover2').src = cars_data[currentIndex + 1]["index"];
+            document.getElementById('discover3').src = cars_data[currentIndex + 2]["index"];
+        }
+
+        // Change image every 3 seconds
+        setInterval(nextImage, 5000);
+    </script>
 </head>
 <body>
 <header>
