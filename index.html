@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <style src="index.css"></style>
+    <script src="index.js"></script>
+</head>
+<body>
+<header>
+    <a href="discover.html">Discover</a>
+</header>
+
+<article>
+    <table class="title_table">
+        <tr>
+            <td class="title_row">
+                <img src="images/logo.webp" alt="Page logo" style="width:100px; height:auto;">
+            </td>
+            <td class="title_row">
+                <h1>Car Rental</h1>
+            </td>
+            <td class="title_row">
+                <img src="images/logo.webp" alt="Page logo" style="width:100px; height:auto;">
+            </td>
+        </tr>
+    </table> 
+</article>
+    
+    <hr>
+
+<article>
+    <div>
+        <p>Want to get notified about discounts?</p>
+        <form>
+            <p>Email address: <input type="email" placeholder="Email address"></p>
+            <p>Max price (euros): <span id="sliderValue">50</span> euros</p>
+
+            <input id="price" name="slider" type="range" min="0" max="100000" oninput="updateSliderValue(this.value);">
+
+            <button type="submit">Subscribe</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</article>
+
+    <hr>
+
+<article>
+    <h2>Discover</h2>
+    <table class="discover_table">
+        <tr>
+            <td class="discover_row">
+                <img id="discover1" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
+            </td>
+            <td class="discover_row">
+                <img id="discover2" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
+            </td>
+            <td class="discover_row">
+                <img id="discover3" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
+            </td>
+        </tr>
+    </table>
+    <p>Choosing a car is difficult - but we have everything you may need: take a look at our Collection, and choose the best offer!</p>
+</article>
+
+    <hr>
+
+<footer>
+    <p>Contact:</p>
+    <p>Phone: +36702416960</p>
+    <p>E-mail: roxftl@inf.elte.hu</p>
+    <p>Address: -</p>
+
+    <p>Kmeczó András E.V.</p>
+    <p>All rights reserved</p>
+</footer>
+</body>
+</html>
