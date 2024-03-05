@@ -1,0 +1,181 @@
+[
+    {
+        "id": "1",
+        "manufacturer": "Toyota",
+        "model": "Auris",
+        "year": 2018,
+        "index": "images/toyotaauris18.jpg",
+        "extras": ["videos/toyotaauris18vid.mov"],
+        "description": null,
+        "owner":
+        {
+            "email": "toyotaowner@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 0,
+        "price": 1200000,
+        "mileage": 60000,
+        "fuel": 0,
+        "fuelConsumption": 8.0,
+        "negotiable": true
+    },
+    {
+        "id": "2",
+        "manufacturer": "BMW",
+        "model": "M5",
+        "year": 2016,
+        "index": "images/bmwm5.jpeg",
+        "extras": [],
+        "description": "Selling my beloved BMW",
+        "owner":
+        {
+            "email": "bmwthebest@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 0,
+        "price": 6500000,
+        "mileage": 100000,
+        "fuel": 1,
+        "fuelConsumption": 6.2,
+        "negotiable": false
+    },
+    {
+        "id": "3",
+        "manufacturer": "BMW",
+        "model": "Series 3",
+        "year": 2019,
+        "index": "images/bmwseries3.jpeg",
+        "extras": [],
+        "description": "Great car, buy it pls",
+        "owner":
+        {
+            "email": "bmwowner@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 2,
+        "price": 4400000,
+        "mileage": 160000,
+        "fuel": 0,
+        "fuelConsumption": 10.2,
+        "negotiable": true
+    },
+    {
+        "id": "4",
+        "manufacturer": "Lada",
+        "model": "",
+        "year": 1973,
+        "index": "images/lada.jpeg",
+        "extras": [],
+        "description": "This is a Lada, what do you expect?",
+        "owner":
+        {
+            "email": "bestlada@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 0,
+        "price": 500000,
+        "mileage": 260000,
+        "fuel": 0,
+        "fuelConsumption": 5.2,
+        "negotiable": false
+    },
+    {
+        "id": "5",
+        "manufacturer": "Mercedes",
+        "model": "Benz GLE",
+        "year": 2020,
+        "index": "images/mercedes.jpeg",
+        "extras": [],
+        "description": "Selling it because I got a new one",
+        "owner":
+        {
+            "email": "mercedesowner@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 2,
+        "price": 12000000,
+        "mileage": 16000,
+        "fuel": 2,
+        "fuelConsumption": 6.3,
+        "negotiable": false
+    },
+    {
+        "id": "6",
+        "manufacturer": "Nissan",
+        "model": "GT-R",
+        "year": 1994,
+        "index": "images/nissangtr.jpeg",
+        "extras": ["images/nissangtr_2.jpeg"],
+        "description": "Sick racecar innit",
+        "owner":
+        {
+            "email": "raceme@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 0,
+        "price": 7000000,
+        "mileage": 80000,
+        "fuel": 0,
+        "fuelConsumption": 15.3,
+        "negotiable": true
+    },
+    {
+        "id": "7",
+        "manufacturer": "Toyota",
+        "model": "Supra Mk4",
+        "year": 1992,
+        "index": "images/supramk4.jpeg",
+        "extras": [],
+        "description": null,
+        "owner":
+        {
+            "email": "mk4@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 1,
+        "price": 7200000,
+        "mileage": 86000,
+        "fuel": 0,
+        "fuelConsumption": 14.7,
+        "negotiable": true
+    },
+    {
+        "id": "8",
+        "manufacturer": "Toyota",
+        "model": "Supra Mk5",
+        "year": 2021,
+        "index": "images/supramk5.jpeg",
+        "extras": [],
+        "description": "You got to buy this dude",
+        "owner":
+        {
+            "email": "mk5@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 3,
+        "price": 3000000,
+        "mileage": 12000,
+        "fuel": 2,
+        "fuelConsumption": 5.7,
+        "negotiable": true
+    },
+    {
+        "id": "9",
+        "manufacturer": "Tesla",
+        "model": "Model Y",
+        "year": 2023,
+        "index": "images/teslamodely.jpeg",
+        "description": "I found out I don't like electric cars, so I'm selling it",
+        "owner":
+        {
+            "email": "electriccarsnotgood@mymail.com",
+            "phone": "+36201234567"
+        },
+        "drive": 0,
+        "price": 8000000,
+        "mileage": 9000,
+        "fuel": 3,
+        "fuelConsumption": 0.0,
+        "negotiable": true
+    }
+]
