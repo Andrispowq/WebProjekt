@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car comparison - Autoshop</title>
+    <script src="global.js" defer></script>
+    <script src="compare.js"></script>
+    <link rel="stylesheet" href="compare.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="print_global.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Main page</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+
+    <hr>
+
+    <header>
+        <h1>Car comparison</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="#cars_table">Table</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <aside>
+        <div id="content"></div>
+    </aside>
+
+    <article>
+        <h2>Car comparison chart</h2>
+        <details open>
+            <summary>Click to Expand Table</summary>
+            <table id="cars_table">
+                <caption>Compare the cars side by side</caption>
+                <tr class="cars_row">
+                    <th class="cars_cell"><p>Data</p></th>
+                    <th class="cars_cell"><p>First car</p></th>
+                    <th class="cars_cell"><p>Second car</p></th>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Image</p></td>
+                    <td class="cars_cell" id="img1" onclick="car1()"></td>
+                    <td class="cars_cell" id="img2" onclick="car2()"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Type</p></td>
+                    <td class="cars_cell" id="type1"></td>
+                    <td class="cars_cell" id="type2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Description</p></td>
+                    <td class="cars_cell" id="desc1"></td>
+                    <td class="cars_cell" id="desc2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Price</p></td>
+                    <td class="cars_cell" id="price1"></td>
+                    <td class="cars_cell" id="price2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Drive</p></td>
+                    <td class="cars_cell" id="drive1"></td>
+                    <td class="cars_cell" id="drive2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Fuel type</p></td>
+                    <td class="cars_cell" id="fuel1"></td>
+                    <td class="cars_cell" id="fuel2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Fuel consumption</p></td>
+                    <td class="cars_cell" id="cons1"></td>
+                    <td class="cars_cell" id="cons2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Mileage</p></td>
+                    <td class="cars_cell" id="mil1"></td>
+                    <td class="cars_cell" id="mil2"></td>
+                </tr>
+
+                <tr class="cars_row">
+                    <td class="cars_cell"><p>Negotiable</p></td>
+                    <td class="cars_cell" id="neg1"></td>
+                    <td class="cars_cell" id="neg2"></td>
+                </tr>
+            </table>
+        </details>
+    </article>
+</body>
+</html>

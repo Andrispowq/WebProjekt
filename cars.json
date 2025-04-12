@@ -5,7 +5,14 @@
         "model": "Auris",
         "year": 2018,
         "index": "images/toyotaauris18.jpg",
-        "extras": ["videos/toyotaauris18vid.mov"],
+        "extras": [
+            {
+                "type": "video",
+                "link": "videos/toyotaauris18vid.mp4",
+                "transcript": "transcripts/toyotaauris18.html",
+                "poster": "images/thumbnail_toyotaauris18.png"
+            }
+        ],
         "description": null,
         "owner":
         {
@@ -105,7 +112,12 @@
         "model": "GT-R",
         "year": 1994,
         "index": "images/nissangtr.jpeg",
-        "extras": ["images/nissangtr_2.jpeg"],
+        "extras": [
+            { 
+                "type": "image",
+                "link": "images/nissangtr_2.jpeg"
+            }
+        ],
         "description": "Sick racecar innit",
         "owner":
         {
@@ -165,6 +177,7 @@
         "model": "Model Y",
         "year": 2023,
         "index": "images/teslamodely.jpeg",
+        "extras": [],
         "description": "I found out I don't like electric cars, so I'm selling it",
         "owner":
         {

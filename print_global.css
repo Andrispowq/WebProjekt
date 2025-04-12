@@ -1,0 +1,28 @@
+
+@media print {
+    .navbar {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+    }
+
+    #query {
+        page-break-after: always;
+    }
+
+    #discover {
+        page-break-before: always;
+        page-break-after: always;
+    }
+}

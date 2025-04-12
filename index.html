@@ -1,107 +1,136 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page</title>
-    <style src="index.css"></style>
+    <title>Main page - Autoshop</title>
+    <script src="global.js" defer></script>
     <script src="index.js"></script>
-
-    <style>
-        #imageFrame {
-          width: 400px;
-          height: 300px;
-          margin: auto;
-          overflow: hidden;
-        }
-        img {
-          width: 100%;
-          height: auto;
-          display: block; /* Remove extra space below the image */
-        }
-    </style>
-    <script>
-        let currentIndex = 0;
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % (cars_data.length - 3);
-            document.getElementById('discover1').src = cars_data[currentIndex]["index"];
-            document.getElementById('discover2').src = cars_data[currentIndex + 1]["index"];
-            document.getElementById('discover3').src = cars_data[currentIndex + 2]["index"];
-        }
-
-        // Change image every 3 seconds
-        setInterval(nextImage, 5000);
-    </script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="print_global.css">
 </head>
 <body>
-<header>
-    <a href="discover.html">Discover</a>
-</header>
-
-<article>
-    <table class="title_table">
-        <tr>
-            <td class="title_row">
-                <img src="images/logo.webp" alt="Page logo" style="width:100px; height:auto;">
-            </td>
-            <td class="title_row">
-                <h1>Car Rental</h1>
-            </td>
-            <td class="title_row">
-                <img src="images/logo.webp" alt="Page logo" style="width:100px; height:auto;">
-            </td>
-        </tr>
-    </table> 
-</article>
+    <nav class="navbar">
+        <a href="discover.html">Discover</a>
+    </nav>
     
     <hr>
+    
+    <header>
+        <div class="title_table">
+            <div class="icon">
+                <a href="images/logo.png" target="_blank"><img src="images/logo_small.png" alt="Page logo"></a>
+            </div>
+        
+            <div class="title">
+                <h1>Autoshop</h1>
+            </div>
+        
+            <div class="icon">
+                <a href="images/logo.png" target="_blank"><img src="images/logo_small.png" alt="Page logo"></a>
+            </div>
+        </div>
+    </header>
 
-<article>
-    <div>
-        <p>Want to get notified about discounts?</p>
-        <form>
-            <p>Email address: <input type="email" placeholder="Email address"></p>
-            <p>Max price (euros): <span id="sliderValue">50</span> euros</p>
+    <hr>
 
-            <input id="price" name="slider" type="range" min="0" max="100000" oninput="updateSliderValue(this.value);">
+    <nav>
+        <ul>
+            <li><a href="#aside">Get notified</a></li>
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#footnote">Footer</a></li>
+        </ul>
+    </nav>
+        
+    <hr>
+    
+    <div class="aside-content" id="aside">
+        <article class="left-article">
+            <h2>Planning a visit?</h2>
+            <a href="images/location_big.png" target="_blank"><img src="images/location.png" alt="Location of the shop"></a>
+        </article>
+        <article class="right-article">
+            <div id="form">
+                <h2>Want to get notified about discounts?</h2>
+                <form onsubmit="handleSubmit(); return false;">
+                    <div>
+                        <label for="mail">Email address: </label>
+                        <input id="mail" type="email" placeholder="Email address" maxlength="40">
+                    </div>
 
-            <button type="submit">Subscribe</button>
-            <button type="reset">Reset</button>
-        </form>
+                    <div>
+                        <label for="price">Max price (euros): <span id="sliderValue">50</span> euros</label>
+                        <input id="price" name="slider" type="range" min="0" max="100000" oninput="updateSliderValue(this.value);">
+                    </div>
+                
+                    <div>
+                        <p>Recieve daily news: </p>
+                        <input type="radio" name="news" value="no" id="no">
+                        <label for="no">No</label>
+                        <input type="radio" name="news" value="yes" id="yes">
+                        <label for="yes">Yes</label>
+                    </div>
+                
+                    <div>
+                        <p>Looking for: </p>
+                        <input type="checkbox" id="sports">
+                        <label for="sports">Sports</label>
+                        <input type="checkbox" id="family">
+                        <label for="family">Family</label>
+                        <input type="checkbox" id="suv">
+                        <label for="suv">SUV</label>
+                    </div>
+                
+                    <div>
+                        <label for="extra">Any special request?</label>
+                        <textarea id="extra" placeholder="Request" maxlength="100"></textarea>
+                    </div>
+                
+                    <div>
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </article>
     </div>
-</article>
-
+    
     <hr>
-
-<article>
-    <h2>Discover</h2>
-    <table class="discover_table">
-        <tr>
-            <td class="discover_row">
-                <img id="discover1" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
-            </td>
-            <td class="discover_row">
-                <img id="discover2" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
-            </td>
-            <td class="discover_row">
-                <img id="discover3" alt="Randomly selected image from the collection" style="width: 300px; height:auto;">
-            </td>
-        </tr>
-    </table>
-    <p>Choosing a car is difficult - but we have everything you may need: take a look at our Collection, and choose the best offer!</p>
-</article>
-
+    
+    <figure id="discover">
+        <h2>Discover</h2>
+        <div class="discover_table">
+            <div class="discover_cell">
+                <img src="images/logo.png" class="discover_img" id="discover1" alt="Randomly selected image from the collection" onclick="navigate('discover.html');">
+            </div>
+            <div class="discover_cell">
+                <img src="images/logo.png" class="discover_img" id="discover2" alt="Randomly selected image from the collection" onclick="navigate('discover.html');">
+            </div>
+            <div class="discover_cell">
+                <img src="images/logo.png" class="discover_img" id="discover3" alt="Randomly selected image from the collection" onclick="navigate('discover.html');">
+            </div>
+        </div>
+        <figcaption class="slogan">Choosing a car is <i>difficult</i> - but we have <strong>everything</strong> you may need: take a look at our <strong>Collection</strong>, and choose the <em>best offer</em>!</figcaption>
+    </figure>
+    
     <hr>
-
-<footer>
-    <p>Contact:</p>
-    <p>Phone: +36702416960</p>
-    <p>E-mail: roxftl@inf.elte.hu</p>
-    <p>Address: -</p>
-
-    <p>Kmeczó András E.V.</p>
-    <p>All rights reserved</p>
-</footer>
+    
+    <footer id="footnote">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h2>Contact:</h2>
+                <p>Phone: +36702416960</p>
+                <p>E-mail: <a href="mailto:roxftl@inf.elte.hu" target="_blank">roxftl@inf.elte.hu</a></p>
+                <p>Address: <a href="https://www.google.com/maps/place/Izland+Aut%C3%B3+Kft./@47.4943908,19.0748757,17.5z/data=!4m6!3m5!1s0x4741dc5fc229ca87:0x3fae6b8b20c40c0f!8m2!3d47.4940043!4d19.0754171!16s%2Fg%2F1hhwfvmf2?entry=ttu" target="_blank">Autoshop</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/kmeczo.andras/" target="_blank"><span lang="hu">Kmeczó András</span></a></p>
+                <p>GitHub: <a href="https://github.com/Andrispowq" target="_blank">Andrispowq</a></p>
+            </div>
+            <div class="legal-info">
+                <p lang="hu">Kmeczó András E.V.</p>
+                <p>All rights reserved @ <time datetime="2024">2024</time></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

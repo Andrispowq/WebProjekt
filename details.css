@@ -1,0 +1,105 @@
+
+#car {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#car img {
+    max-width: 100%;
+    height: auto;
+}
+
+.extra {
+    margin-bottom: 10px;
+}
+
+.extra img,
+.extra video {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article {
+    flex: 1;
+}
+
+.left-article {
+    margin: 20px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.right-article {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#query {
+    display: flex;
+    flex-direction: column;
+}
+
+#matching {
+    flex: 1; 
+}
+
+#searchbar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#searchbar:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container div {
+    margin-bottom: 10px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+

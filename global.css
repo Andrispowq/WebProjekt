@@ -1,0 +1,30 @@
+
+.navbar {
+    text-align: right;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.navbar a {
+    font-size: large;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    padding-left: 15px;
+}
+
+.navbar a:hover, .navbar a:active {
+    color: #0056b3;
+    text-decoration: underline;
+    text-decoration-color: #0056b3;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

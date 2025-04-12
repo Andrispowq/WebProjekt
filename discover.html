@@ -3,88 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover</title>
-    <script src="index.js"></script>
+    <title>Discover - Autoshop</title>
+    <script src="global.js" defer></script>
     <script src="discover.js"></script>
+    <link rel="stylesheet" href="discover.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="print_global.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html">Main page</a>
+    </nav>
+    
+    <hr>
+
     <header>
-        <h1>Discover</h1>
+        <h1>Discover page</h1>
     </header>
 
     <hr>
 
-    <article>
+    <nav>
+        <ul>
+            <li><a href="#query">Query</a></li>
+            <li><a href="#table">Results</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+<section>
+    <h2>Content</h2>
+    <article id="query">
         <form>
-            <div>
-                <p>Looking for something?</p>
-                <input type="search" id="searchbar" placeholder="Type something...">
-            </div>
+            <h2>Looking for something?</h2>
 
             <div>
-                <p>Fuel type:</p>
-                <label>
-                    <input type="checkbox">
-                    Petrol
-                </label>
-                <label>
-                    <input type="checkbox">
-                    Diesel
-                </label>
-                <label>
-                    <input type="checkbox">
-                    Hybrid
-                </label>
-                <label>
-                    <input type="checkbox">
-                    Electric
-                </label>
+                <label for="searchbar">Search here:</label>
+                <input type="search" id="searchbar" placeholder="Type something..." oninput="generateTable();" maxlength="30">
             </div>
 
-            <div>
-                <p>Wheel drive:</p>
-                <label>
-                    <input type="radio" name="drive">
-                    FWD
-                </label>
-                <label>
-                    <input type="radio" name="drive">
-                    RWD
-                </label>
-                <label>
-                    <input type="radio" name="drive">
-                    AWD
-                </label>
-                <label>
-                    <input type="radio" name="drive">
-                    4WD
-                </label>
+            <div class="options">
+                <div class="fuel-options">
+                    <p>Fuel type:</p>
+                    <input type="checkbox" id="petrol" onchange="generateTable();">
+                    <label for="petrol">Petrol</label>
+                    <input type="checkbox" id="diesel" onchange="generateTable();">
+                    <label for="diesel">Diesel</label>
+                    <input type="checkbox" id="hybrid" onchange="generateTable();">
+                    <label for="hybrid">Hybrid</label>
+                    <input type="checkbox" id="electric" onchange="generateTable();">
+                    <label for="electric">Electric</label>
+                </div>
+            
+                <div class="drive-options">
+                    <p>Wheel drive:</p>
+                    <input type="radio" name="drive" id="fwd" value="0" onchange="generateTable();">
+                    <label for="fwd">FWD</label>
+                    <input type="radio" name="drive" id="rwd" value="1" onchange="generateTable();">
+                    <label for="rwd">RWD</label>
+                    <input type="radio" name="drive" id="awd" value="2" onchange="generateTable();">
+                    <label for="awd">AWD</label>
+                    <input type="radio" name="drive" id="4wd" value="3" onchange="generateTable();">
+                    <label for="4wd">4WD</label>
+                </div>
+            </div>            
+
+            <div style="padding-top: 15px;">
+                <label for="min_val">Minimum price: <span id="min_price">25000</span> euros</label>
+                <input type="range" id="min_val" min="0" max="50000" oninput="changeMin(this.value);" onchange="changeMin(this.value);">
+
+                <br>
+
+                <label for="max_val">Maximum price: <span id="max_price">275000</span> euros</label>
+                <input type="range" id="max_val" min="50000" max="500000" oninput="changeMax(this.value);" onchange="changeMax(this.value);">
+
+                <script>
+                    function changeMin(value) {
+                        document.getElementById("min_price").innerHTML = value
+                        generateTable()
+                    }
+                    function changeMax(value) {
+                        document.getElementById("max_price").innerHTML = value
+                        generateTable()
+                    }
+                </script>
             </div>
 
-            <div>
-                <label>
-                    Minimum price:
-                    <input type="range" min="0" max="50000">
-                </label>
-                <label>
-                    Maximum price:
-                    <input type="range" min="50000" max="100000">
-                </label>
-            </div>
-
-            <div>
-                <button type="submit">Search</button>
-                <button type="reset">Reset</button>
+            <div style="padding-top: 15px;">
+                <button type="submit" onclick="generateTable();">Reset</button>
             </div>
         </form>
     </article>
 
     <hr>
 
-    <artice>
-        <table>
-            
-        </table>
-    </artice>
+    <article id="table">
+        <h2>Results</h2>
+        <div id="car-container">
+        </div>
+    </article>
+</section>
 </body>
 </html>
